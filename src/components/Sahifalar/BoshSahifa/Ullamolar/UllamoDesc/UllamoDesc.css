@@ -1,0 +1,132 @@
+.ullamo-desc {
+  padding-top: 0px !important;
+  z-index: 111 !important;
+} 
+
+.h1 {
+  color: #fff;
+}
+
+.ullamo-page-flex {
+  display: flex;
+}
+
+.left-side {
+  width: 40%;
+  background-color: #191919;
+}
+
+.left-side img {
+  width:90%;
+  height: 70vh;
+  object-fit: cover;
+  border-top-right-radius: 35px;
+  border-bottom-right-radius: 35px;
+}
+
+.right-side {
+  width: 60%;
+  background-color: #191919;
+}
+
+.left-desc-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.tavallud-sana {
+  color: #999;
+}
+
+.tavallud-sana h1 {
+  color: #C9AC8C;
+  font-size: 35px;
+  font-family: 'Rotterburg Stylish FREE';
+}
+
+.vafot-sanasi {
+  color: #999;
+}
+
+.vafot-sanasi h1 {
+  color: #C9AC8C;
+  font-size: 35px;
+  font-family: 'Rotterburg Stylish FREE';
+}
+
+.right-side {
+  margin-top: 50px;
+  /* overflow-y: scroll; */
+}
+
+.right-h1 {
+  width: 671px;
+  color: #C9AC8C;
+  font-family: 'Rotterburg Stylish FREE';
+  font-size: 45px;
+}
+
+.right-p {
+  width: 671px;
+  margin-top: 10px;
+  color: #FFFFFFCC;
+}
+
+.ijod-head-flex {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #C9AC8C;
+}
+
+.ijod-head-flex i {
+  margin-right: 10px;
+  font-size: 30px;
+}
+
+.ijod-head-flex h3 {
+  font-size: 20px;
+  color: #C9AC8C;
+  font-family: 'Rotterburg Stylish FREE';
+}
+
+.ijod-p {
+  width: 400px;
+  color: #FFFFFFCC;
+}
+
+.asarlari {
+  margin-top: 20px;
+}
+
+.asarlari h3 {
+  color: #C9AC8C;
+  font-size: 20px;
+  font-family: 'Rotterburg Stylish FREE';
+}
+
+.barchasi {
+  float: right;
+  margin-right: 50px;
+  background-color: inherit;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: all .4s ease;
+}
+
+.barchasi:hover {
+  opacity: .7;
+}
+
+.book-ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  padding-bottom: 200px;
+  
+}

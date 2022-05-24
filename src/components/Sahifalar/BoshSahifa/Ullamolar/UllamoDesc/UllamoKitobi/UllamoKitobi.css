@@ -1,0 +1,32 @@
+.kitob-li {
+  width: 160px;
+  height: 350px;
+  border-radius: 15px;
+  list-style-type: none;
+  cursor: pointer;
+  transition: all .4s ease;
+  overflow: hidden;
+}
+
+.kitob-li:hover img {
+  transform: scale(1.01);
+}
+
+.kitob-li img {
+  width: 100%;
+  height: 240px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  transition: all .4s ease;
+}
+
+.kitob-li h3 {
+  font-size: 20px;
+}
+
+.kitob-li p {
+  color: #fff;
+  font-size: 13px;
+  margin-top: 10px;
+
+}

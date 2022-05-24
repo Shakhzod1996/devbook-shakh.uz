@@ -1,0 +1,42 @@
+.har-bir-book-li {
+  width: 160px;
+  height: 320px;
+  /* background-color: aqua; */
+  margin-bottom: 45px;
+  border-radius: 15px;
+  cursor: pointer;
+  text-align: left;
+  overflow: hidden;
+  transition: all .5s ease;
+}
+
+.har-bir-book-li > img {
+  width: 100%;
+  height: 240px;
+  border-radius: 15px;
+  transition: all .5s ease;
+}
+
+.har-bir-book-li:hover img {
+  transform: scale(1.01);
+}
+
+.har-bir-book-li:hover {
+  background-color: #000;
+}
+
+.har-bir-book-li h3 {
+  color:#C9AC8C;
+  font-size: 19px;
+  font-family: 'Rotterburg Stylish FREE';
+  margin-bottom: 3px;
+  padding-left: 3px;
+
+}
+
+.har-bir-book-li p {
+  font-size: 12px;
+  color: #fff;
+  margin-bottom: 3px;
+  padding-left: 3px;
+}

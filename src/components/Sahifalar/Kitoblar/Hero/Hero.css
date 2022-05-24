@@ -1,0 +1,72 @@
+
+.hero {
+  width: 1200px;
+  margin: auto;
+  position: relative;
+  height: 346px;
+  overflow: hidden;
+
+}
+
+.slider-move-flex {
+  display: flex;
+  transition: all .6s ease;
+  transform: translateX(0);
+}
+
+.slider-move-flex img {
+  width: 1200px;
+  height: 100%;
+}
+
+.slider-btns {
+  display: flex;
+  position: absolute;
+  bottom: 80px;
+  left: 200px;
+}
+
+.slider-btns button {
+  border: none;
+  background-color: #fff;
+  width: 60px;
+  height: 4px !important;
+  cursor: pointer;
+  margin: 5px;
+  border-radius: 5px;
+  opacity: .7;
+}
+
+.first {
+  transform: translateX(-1200px);
+}
+
+.second {
+  transform: translateX(-2400px);
+}
+
+.third {
+  transform: translateX(-3600px);
+}
+
+.zero {
+  transform: translateX(0);
+}
+
+.div-img {
+  width: 1200px;
+  position: relative;
+  height: 100%;
+}
+
+.div-img h2 {
+  position: absolute;
+  z-index: 555;
+  margin: 0;
+  top: 20px;
+  left: 80px;
+  font-size: 60px;
+  width: 300px;
+  font-family: 'Rotterburg Stylish FREE';
+  color: #C9AC8C;
+}

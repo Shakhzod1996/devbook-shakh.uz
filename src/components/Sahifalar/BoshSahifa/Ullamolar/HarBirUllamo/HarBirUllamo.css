@@ -1,0 +1,35 @@
+.year {
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 14px;
+}
+
+.book-flex {
+  position: absolute;
+  display: flex;
+  margin-top: 15px;
+  color: #fff;
+  align-items: center;
+  justify-content: space-around;
+  bottom: 10px;
+  width: 100%;
+}
+
+.book-flex p {
+  transition: all .4s ease;
+}
+
+.book-flex p:hover {
+  opacity: .6;
+}
+
+.li {
+  transition: all .4s ease;
+}
+
+.li img {
+  transition: all .5s ease;
+}
+
+.li:hover img {
+  transform: scale(1.01);
+}

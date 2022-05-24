@@ -1,0 +1,119 @@
+.kitob-desc-flex {
+  display: flex;
+  margin-top: 30px;
+}
+
+.left-desc {
+  width: 40%;
+  text-align: center;
+}
+
+.left-desc img {
+  width: 400px;
+  margin: auto;
+  
+}
+
+.btns-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btns-flex button {
+  margin: 20px;
+  background-color: inherit;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 17px;
+  transition: all .4s ease;
+}
+
+.btns-flex button:hover {
+  color: #C9AC8C;
+}
+
+.right-desc {
+  width: 60%;
+}
+
+.kitob-nomi {
+  font-size: 40px;
+  font-family: 'Rotterburg Stylish FREE';
+  color: #C9AC8C;
+  margin-bottom: 15px;
+}
+
+.h4 {
+  display: flex;
+  align-items: center;
+  color: #C9AC8C;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.h4 i {
+  margin-left: 10px;
+  color: #fff;
+}
+
+.right-desc > p {
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.right-desc > p span {
+  opacity: .7;
+  padding-right: 10px;
+}
+
+.tuliq-flex {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.tuliq-flex p {
+  margin-left: 5px;
+  margin-right: 5px;
+  color: #C9AC8C;
+}
+
+.tuliq-flex hr {
+  border: none;
+  background-color: #c9ac8cb0;
+  height: 1px;
+  width: 70%;
+  margin-left: 10px;
+}
+
+.tuliq {
+  line-height: 30px;
+  color: rgba(255, 255, 255, 0.71);
+}
+
+.formulalar {
+  display: flex;
+  align-items: center;
+}
+
+.mavjud {
+  margin-bottom: 20px;
+  color: #C9AC8C;
+  font-family: 'Rotterburg Stylish FREE';
+}
+
+.formulalar div {
+  text-align: center;
+  margin-right: 50px;
+  color: #fff;
+  cursor: pointer;
+  transition: all .4s ease;
+}
+
+.formulalar div:hover {
+  color: #C9AC8C;
+}

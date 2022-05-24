@@ -1,0 +1,104 @@
+.ullamolar {
+  margin-top: 160px;
+  text-align: center;
+}
+
+.ullamolar h1 {
+  font-size: 31px;
+  font-family: "Rotterburg Stylish FREE";
+  margin-bottom: 35px;
+  color: #c9ac8c;
+}
+
+.btns-filter {
+  width: 50%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btns-filter button {
+  border: none;
+  background-color: inherit;
+  color: #ffffffa8;
+  font-size: 20px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.btns-filter button:hover {
+  color: #c9ac8c;
+}
+
+.ul-ullamo {
+  width: 84%;
+  margin: auto;
+  margin-top: 80px;
+  padding-bottom: 50px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  justify-content: center;
+  grid-gap: 10px;
+  justify-items: center;
+  grid-row-gap: 30px;
+  min-height: 70vh
+}
+
+.ul-ullamo a {
+  text-decoration: none;
+}
+
+.non-div {
+  width: 100%;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.non-div h1 {
+  margin: 0;
+}
+
+.non-div i {
+  font-size: 80px !important;
+  margin-bottom: 10px !important;
+}
+
+.non-div h2 {
+  color: #fff;
+  font-size: 30px !important;
+
+}
+
+.ul-ullamo li {
+  width: 173px;
+  list-style-type: none;
+  height: 236px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;  
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+  transition: all .4s ease;
+}
+
+.ul-ullamo li:hover {
+  background-color: #000;
+}
+
+.ul-ullamo li h4 {
+  color: #c9ac8c;
+  font-weight: 500;
+}
+
+.ul-ullamo li img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.temur {
+  color: #c9ac8c !important;
+}

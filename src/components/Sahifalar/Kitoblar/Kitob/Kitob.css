@@ -1,0 +1,14 @@
+.kitob {
+  margin-top: 130px;
+}
+
+.ul-kitob {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: auto;
+  margin-top: 80px;
+  list-style: none;
+  gap: 30px;
+  /* background-color: antiquewhite; */
+}
