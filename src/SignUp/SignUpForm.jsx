@@ -1,20 +1,41 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-export default function SignForm(props) {
-  let [firstName, setFirstName] = useState("");
-  let [surName, setsurName] = useState("");
-
-  let [num, setNum] = useState("");
-  let [email, setEmail] = useState("");
-  let [pass, setPass] = useState("");
+export default function SignForm({
+  setSwit,
+  firstName,
+  setFirstName,
+  surName,
+  setsurName,
+  num,
+  setNum,
+  email,
+  setEmail,
+  pass,
+  setPass,
+}) {
+  let [one, setOne] = useState('black');
+  let [two, setTwo] = useState('black');
+  let [three, setThree] = useState('black');
+  let [four, setFour] = useState('black');
 
   let emptyNameHandler = (e) => {
     setFirstName(e.target.value);
+    if (e.target.value.length > 5 && e.target.value.match(/[A-Z]/)) {
+      setOne("green");
+    } else {
+      setOne("red");
+    }
   };
 
   let emptySurHandler = (e) => {
     setsurName(e.target.value);
+
+    if (e.target.value.length > 5 && e.target.value.match(/[A-Z]/)) {
+      setTwo("green");
+    } else {
+      setTwo("red");
+    }
   };
 
   let emptyNumHandler = (e) => {
@@ -23,14 +44,31 @@ export default function SignForm(props) {
 
   let emptyEmailHandler = (e) => {
     setEmail(e.target.value);
+    if (
+      e.target.value.length > 5 &&
+      e.target.value.match(/[-!$%^&*()_+|~=`{}\[\]:";'<>?,.\/]/)
+    ) {
+      setThree("green");
+    } else {
+      setThree("red");
+    }
   };
 
   let emptypasHandler = (e) => {
     setPass(e.target.value);
+    if (
+      e.target.value.length > 8 &&
+      e.target.value.match(/[A-Z]/) &&
+      e.target.value.match(/[-!$%^&*()_+|~=`{}\[\]:";'<>?,.\/]/)
+    ) {
+      setFour("green");
+    } else {
+      setFour("red");
+    }
   };
 
   let swichHandlerTrue = () => {
-    props.useSwit(false);
+    setSwit(false);
   };
 
   return (
@@ -43,61 +81,91 @@ export default function SignForm(props) {
         </span>
       </p>
       <form className="sig-up-form">
-        <input
-          type="text"
-          onChange={emptyNameHandler}
-          value={firstName}
-          placeholder="First Name"
-          required
-        />
+        <div>
+          <input
+            className={one === 'black' ? 'input-black': one === 'green' ? "input-green" : "input-red"}
+            type="text"
+            onChange={emptyNameHandler}
+            value={firstName}
+            placeholder="First Name"
+            required
+          />
+          <p className={`${one === "black" ? "err black" : one === "green" ? "err green" : "err red"}`}>
+          {one === "black" ? "" : one === "green" ? "Success" : "Enter Valid UserName"}
+          </p>
+        </div>
         <br />
-        <input
-          type="text"
-          value={surName}
-          onChange={emptySurHandler}
-          placeholder="Last Name"
-          required
-        />
+
+        <div>
+          <input
+            className={two === 'black' ? 'input-black': two === 'green' ? "input-green" : "input-red"}
+            type="text"
+            value={surName}
+            onChange={emptySurHandler}
+            placeholder="Last Name"
+            required
+          />
+          <p className={`${two === "black" ? "err black" : two === "green" ? "err green" : "err red"}`}>
+          {two === "black" ? "" : two === "green" ? "Success" : "Enter Valid LastName"}
+          </p>
+        </div>
+
         <br />
-        <input
-          type="number"
-          value={num}
-          onChange={emptyNumHandler}
-          placeholder="Phone"
-          required
-        />
+
+        <div>
+          <input
+            type="date"
+            value={num}
+            onChange={emptyNumHandler}
+            placeholder="BirthDate"
+            required
+          />
+          <p className="er3"></p>
+        </div>
+
         <br />
-        <input
-          type="email"
-          value={email}
-          onChange={emptyEmailHandler}
-          placeholder="Email"
-          required
-        />
+
+        <div>
+          <input
+            className={three === 'black' ? 'input-black': three === 'green' ? "input-green" : "input-red"}
+            type="email"
+            value={email}
+            onChange={emptyEmailHandler}
+            placeholder="Email"
+            required
+          />
+          <p className={`${three === "black" ? "err black" : three === "green" ? "err green" : "err red"}`}>
+          {three === "black" ? "" : three === "green" ? "Success" : "Enter Valid Email"}
+          </p>
+        </div>
         <br />
-        <input
-          type="password"
-          value={pass}
-          onChange={emptypasHandler}
-          placeholder="Password"
-          required
-        />
+
+        <div>
+          <input
+            className={four === 'black' ? 'input-black': four === 'green' ? "input-green" : "input-red"}
+            type="password"
+            value={pass}
+            onChange={emptypasHandler}
+            placeholder="Password"
+            required
+          />
+          <p className={`${four === "black" ? "err black" : four === "green" ? "err green" : "err red"}`}>
+          {four === "black" ? "" : four === "green" ? "Success" : "Enter Valid Password"}
+          </p>
+        </div>
+
         <br />
-        {firstName === "" ||
-        surName === "" ||
-        num === "" ||
-        email === "" ||
-        pass === "" ? (
-          <button className="submit" type="submit">
-            Next step
-          </button>
-        ) : (
+        {one === "green" && two === "green" && three === "green" && four === "green" ? (
           <Link to="container/bosh-sahifa">
             <button className="submit" type="submit">
               {" "}
               Next step
             </button>
           </Link>
+        ) : (
+          <button className="submit" type="submit">
+            Next step
+          </button>
         )}
       </form>
     </div>

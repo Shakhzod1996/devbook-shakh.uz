@@ -2,16 +2,13 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import HarBirUllamo from "./HarBirUllamo/HarBirUllamo";
 import "./Ullamolar.css";
-import arr from '../../../../secondMain'
 
-export default function Ullamolar({newArrBtn, handlerPagenation, newArr, setSort, setNewArr, sort, data, setData }) {
-  let [status, setStatus] = useState('hammasi')
-
-
-
+export default function Ullamolar({ newArr, setSort, setNewArr, sort }) {
+  console.log(newArr);
+  let [status, setStatus] = useState("hammasi");
   // ? fiter with buttons
   const filterHandlerId = () => {
-    setData(
+    setNewArr(
       sort.filter((item) => {
         return item.genre === "biznes";
       })
@@ -20,18 +17,18 @@ export default function Ullamolar({newArrBtn, handlerPagenation, newArr, setSort
   };
 
   const filterHandlerId1 = () => {
-    setData(sort.filter((item) => item));
+    setNewArr(sort.filter((item) => item));
     setStatus("hammasi");
   };
 
   const filterHandlerId2 = () => {
-    setData(sort.filter((item) => item.genre === "diniy"));
+    setNewArr(sort.filter((item) => item.genre === 'diniy'));
     setStatus("diniy");
   };
 
   const filterHandlerId3 = () => {
-    setData(sort.filter((item) => item.genre === "jahon"));
-    setStatus("jahon");
+    setNewArr(sort.filter((item) => item.id > 9));
+    setStatus("mustaqil");
   };
 
   return (
@@ -43,26 +40,26 @@ export default function Ullamolar({newArrBtn, handlerPagenation, newArr, setSort
           className={`${status === "hammasi" ? "temur" : null}`}
           onClick={filterHandlerId1}
         >
-          Hamma Yozuvchilar{" "}
+          Hamma kitoblar{" "}
         </button>
         <button
           className={`${status === "biznes" ? "temur" : null}`}
           onClick={filterHandlerId}
         >
-          Biznes Yozuvchilari{" "}
+          Biznes kitoblari{" "}
         </button>
 
         <button
           className={`${status === "diniy" ? "temur" : null}`}
           onClick={filterHandlerId2}
         >
-          Diniy kitob Yozuvchilari{" "}
+          Diniy kitoblar{" "}
         </button>
         <button
-          className={`${status === "jahon" ? "temur" : null}`}
+          className={`${status === "mustaqil" ? "temur" : null}`}
           onClick={filterHandlerId3}
-        >
-          Jahon Yozuvchilari{" "}
+        >Jahon Kitoblari
+          {" "}
         </button>
       </div>
       {newArr.length === 0 && (
@@ -75,20 +72,12 @@ export default function Ullamolar({newArrBtn, handlerPagenation, newArr, setSort
       )}
 
       <ul className="ul-ullamo">
-        {data.map((item, i) => {
-          return (
-            <Link key={item.id} to={`${item.id}`}>
-              <HarBirUllamo item={item} />
-            </Link>
-          );
-        })}
-      </ul>
-
-      <div className="pagination">
-      {newArrBtn && newArrBtn.map((e,i)=>(
-        <button onClick={handlerPagenation} key={i} id={e}>{e}</button>
+        {newArr.map((item, i) => (
+          <Link key={item.id} to={`${item.id}`}>
+            <HarBirUllamo item={item} />
+          </Link>
         ))}
-      </div>
+      </ul>
     </div>
   );
 }

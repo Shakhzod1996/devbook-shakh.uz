@@ -1,6 +1,7 @@
 .kitob-desc-flex {
   display: flex;
   margin-top: 30px;
+  padding-bottom: 50px;
 }
 
 .left-desc {
@@ -53,6 +54,17 @@
   cursor: pointer;
 }
 
+.h4 a {
+  text-decoration: none;
+  color: #fff;
+  padding-right: 10px;
+  transition: all .4s ease;
+}
+
+.h4 a:hover {
+  color: #C9AC8C;
+}
+
 .h4 i {
   margin-left: 10px;
   color: #fff;
@@ -93,6 +105,21 @@
 .tuliq {
   line-height: 30px;
   color: rgba(255, 255, 255, 0.71);
+  transition: all .4s ease;
+}
+
+.tuliq1 {
+  line-height: 30px;
+  color: rgba(255, 255, 255, 0.71);
+  overflow: hidden;
+  height: 0;
+  transition: all .4s ease;
+}
+
+.tuliq1-act {
+  min-height: 200px;
+  transition: all .4s ease;
+  overflow-y: scroll;
 }
 
 .formulalar {
@@ -116,4 +143,37 @@
 
 .formulalar div:hover {
   color: #C9AC8C;
+}
+
+.add-btn {
+  margin-left: 200px;
+
+}
+
+.add-btn button {
+  padding: 10px 30px;
+  background-color: #C9AC8C;
+  color: #3C2710;
+  font-size: 17px;
+  cursor: pointer;
+  border: none;
+  transition: all .4s ease;
+}
+
+.add-btn button:hover {
+  background-color: #a58460;
+}
+
+.add-btn button:active {
+  transform: scale(1.04);
+  opacity: .7;
+}
+
+.transform {
+  transform: rotate(-180deg);
+}
+
+.bx-down-arrow-alt {
+  font-size: 18px;
+  transition: all .4s ease;
 }

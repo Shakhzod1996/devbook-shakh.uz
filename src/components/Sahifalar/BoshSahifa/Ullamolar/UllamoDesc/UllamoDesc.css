@@ -1,6 +1,7 @@
 .ullamo-desc {
   padding-top: 0px !important;
   z-index: 111 !important;
+  margin-top: 20px;
 } 
 
 .h1 {
@@ -68,7 +69,7 @@
 }
 
 .right-p {
-  width: 671px;
+  width: 720px;
   margin-top: 10px;
   color: #FFFFFFCC;
 }
@@ -93,7 +94,7 @@
 }
 
 .ijod-p {
-  width: 400px;
+  width: 600px;
   color: #FFFFFFCC;
 }
 
@@ -124,9 +125,13 @@
 
 .book-ul {
   display: flex;
-  justify-content: space-between;
+  width: 100%;
   align-items: center;
   margin-top: 50px;
   padding-bottom: 200px;
   
+}
+
+.book-ul a {
+  text-decoration: none;
 }

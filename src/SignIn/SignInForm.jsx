@@ -5,7 +5,7 @@ export default function SignForm(props) {
   let [password, setPassword] = useState("");
 
   let swichHandlerTrue = () => {
-    props.useSwit(true);
+    props.setSwit(true);
   };
 
   let sum = (e) => {
@@ -48,11 +48,11 @@ export default function SignForm(props) {
             Next step
           </button>
         ) : (
-          <Link to="container/bosh-sahifa">
+          
             <button className="submit" type="submit">
               Next step
             </button>
-          </Link>
+          
         )}
       </form>
     </div>

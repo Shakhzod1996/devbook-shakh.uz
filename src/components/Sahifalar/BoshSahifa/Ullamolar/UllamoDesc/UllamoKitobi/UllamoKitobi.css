@@ -1,11 +1,12 @@
 .kitob-li {
   width: 160px;
-  height: 350px;
+  padding-bottom: 10px;
   border-radius: 15px;
   list-style-type: none;
   cursor: pointer;
   transition: all .4s ease;
   overflow: hidden;
+  margin-right: 40px;
 }
 
 .kitob-li:hover img {
@@ -22,6 +23,9 @@
 
 .kitob-li h3 {
   font-size: 20px;
+  width: 100% ;
+  overflow: hidden;
+  height: 24px;
 }
 
 .kitob-li p {

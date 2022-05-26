@@ -8,26 +8,64 @@ import SingUp from "./SignUp/SingUp";
 function App() {
   let location = useLocation();
 
-  let [swit, useSwit] = useState(false);
+  let [swit, setSwit] = useState(false);
   let [singIn, setSingIn] = useState("");
+
+  let [firstName, setFirstName] = useState("");
+  let [surName, setsurName] = useState("");
+  let [num, setNum] = useState("");
+  let [email, setEmail] = useState("");
+  let [pass, setPass] = useState("");
 
   return (
     <div className="App">
       <Routes>
         {swit ? (
-          <Route path="/" exact element={<SingUp useSwit={useSwit} />} />
+          <Route
+            path="/"
+            exact
+            element={
+              <SingUp
+                setSwit={setSwit}
+                firstName={firstName}
+                setFirstName={setFirstName}
+                surName={surName}
+                setsurName={setsurName}
+                num={num}
+                setNum={setNum}
+                email={email}
+                setEmail={setEmail}
+                pass={pass}
+                setPass={setPass}
+              />
+            }
+          />
         ) : (
           <Route
             path="/"
             element={
-              <SingIn useSwit={useSwit} setSingIn={setSingIn} singIn={singIn} />
+              <SingIn setSwit={setSwit} setSingIn={setSingIn} singIn={singIn} />
             }
           />
         )}
 
         <Route
           path="container/*"
-          element={<Container pathName={location.pathname} />}
+          element={
+            <Container
+            setPass={setPass}
+              pathName={location.pathname}
+              num={num}
+              firstName={firstName}
+              surName={surName}
+              email={email}
+              
+                setFirstName={setFirstName}
+                setsurName={setsurName}
+                setNum={setNum}
+                setEmail={setEmail}
+            />
+          }
         />
       </Routes>
     </div>

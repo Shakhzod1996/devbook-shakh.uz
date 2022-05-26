@@ -62,3 +62,42 @@
   color: #549FF9;
   text-decoration: none;
 }
+
+.sig-up-form > div {
+  position: relative;
+}
+
+.err {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+.err-no {
+  color: green;
+}
+.input-black {
+  border: 1.5px solid rgb(162, 162, 162) !important;
+}
+
+.input-red {
+  border: 1.5px solid red !important;
+}
+
+.input-green {
+  border: 1.5px solid green !important;
+
+}
+
+
+.black {
+  color: #000;
+}
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}

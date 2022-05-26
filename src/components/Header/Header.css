@@ -61,11 +61,33 @@
 .avatar-flex {
   display: flex;
   align-items: center;
+  cursor: pointer;
+  transition: all .4s ease;
+  position: relative;
+}
+
+.circle {
+  position: absolute;
+  top: -10px;
+  right: 15px;
+  padding: 2px 7px;
+  background-color: rgb(221, 62, 62);
+  font-size: 13px;
+  border-radius: 30px;
+}
+
+.avatar-flex:hover i {
+  color: #C9AC8C;
+}
+
+.avatar-flex i {
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .avatar-flex > img {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
   object-fit: cover;
   margin-right: 10px;

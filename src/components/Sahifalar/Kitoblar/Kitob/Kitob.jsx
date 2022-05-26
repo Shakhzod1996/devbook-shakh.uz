@@ -1,33 +1,40 @@
-import React, { useState } from 'react';
-import HarBirKitob from './HarBirKitob/HarBirKitob';
-import './Kitob.css'
+import React, { useState } from "react";
+import HarBirKitob from "./HarBirKitob/HarBirKitob";
+import "./Kitob.css";
 
-export default function Kitob({setSort, newArr, setNewArr, sort}) {
-  let [status, setStatus] = useState("jadid");
+export default function Kitob({handlerPagenation, setData, newArrBtn, data, setSort, newArr, setNewArr, sort }) {
+  let [status, setStatus] = useState("barcha");
 
-  // ? fiter with buttons
+
+
+  // ? filter with buttons
   const filterHandlerId = () => {
-    setNewArr(
+    setData(
       sort.filter((item) => {
-        return item.id < 4;
+        return item.genre === "biznes";
       })
     );
-    setStatus("temur");
+    setStatus("biznes");
   };
 
   const filterHandlerId1 = () => {
-    setNewArr(sort.filter((item) => item));
-    setStatus("jadid");
+    setData(sort.filter((item) => item));
+    setStatus("barcha");
   };
 
   const filterHandlerId2 = () => {
-    setNewArr(sort.filter((item) => item.id > 4 && item.id < 9));
-    setStatus("sovet");
+    setData(sort.filter((item) => item.genre === 'jahon'));
+    setStatus("jahon");
   };
 
   const filterHandlerId3 = () => {
-    setNewArr(sort.filter((item) => item.id > 9));
-    setStatus("mustaqil");
+    setData(sort.filter((item) => item.genre === "diniy"));
+    setStatus("diniy");
+  };
+
+  const filterHandlerId4 = () => {
+    setData(sort.filter((item) => item.genre === "uzbek"));
+    setStatus("uzbek");
   };
 
   return (
@@ -36,28 +43,36 @@ export default function Kitob({setSort, newArr, setNewArr, sort}) {
 
       <div className="btns-filter">
         <button
-          className={`${status === "temur" ? "temur" : null}`}
-          onClick={filterHandlerId}
-        >
-          Tarixiy Kitoblar{" "}
-        </button>
-        <button
-          className={`${status === "jadid" ? "temur" : null}`}
+          className={`${status === "barcha" ? "temur" : null}`}
           onClick={filterHandlerId1}
         >
-          Barcha Kitoblar{" "}
+          Barcha kitoblar{" "}
         </button>
         <button
-          className={`${status === "sovet" ? "temur" : null}`}
+          className={`${status === "biznes" ? "temur" : null}`}
+          onClick={filterHandlerId}
+        >
+          Biznes Kitoblari{" "}
+        </button>
+
+        <button
+          className={`${status === "jahon" ? "temur" : null}`}
           onClick={filterHandlerId2}
         >
-          Badiiy Kitoblar{" "}
+          Jahon Kitoblari{" "}
         </button>
         <button
-          className={`${status === "mustaqil" ? "temur" : null}`}
+          className={`${status === "diniy" ? "temur" : null}`}
           onClick={filterHandlerId3}
         >
-          Sarguzash Kitoblari{" "}
+          Diniy Kitoblar{" "}
+        </button>
+
+        <button
+          className={`${status === "uzbek" ? "temur" : null}`}
+          onClick={filterHandlerId4}
+        >
+          Uzbek Kitoblari{" "}
         </button>
       </div>
       {newArr.length === 0 && (
@@ -69,13 +84,17 @@ export default function Kitob({setSort, newArr, setNewArr, sort}) {
         </div>
       )}
 
-      
       <ul className="ul-kitob">
-        {newArr.map((item, i) =>  (
-        <HarBirKitob key={i} books={item.books} />
+        {data.map((item, i) => (
+          <HarBirKitob key={i} books={item.bookObj} />
         ))}
       </ul>
-      
+
+      <div className="pagination">
+      {newArrBtn && newArrBtn.map((e,i)=>(
+        <button onClick={handlerPagenation} key={i} id={e}>{e}</button>
+        ))}
+      </div>
     </div>
   );
 }

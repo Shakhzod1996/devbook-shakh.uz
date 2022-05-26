@@ -4,14 +4,16 @@ import "./HarBirKitob.css";
 
 export default function HarBirKitob({ books }) {
   
+
+  
   return (
     <div>
       {books.map((item, i) => (
         <Link key={i} to={`${item.bookId}`}>
         <li className="har-bir-book-li">
-          <img src={item.img} alt="img" />
-          <h3>{item.nomi}</h3>
-          <p  className="nomi">{item.shoir}</p>
+          <img src={item.bookImg} alt="img" />
+          <h3>{item.bookName}</h3>
+          <p  className="nomi">{item.name} {item.lastName}</p>
           <p><i className='bx bxs-star'></i> 4.1-3400 fikrlar</p>
           </li>
         </Link>

@@ -4,12 +4,14 @@ import "./UllamoKitobi.css";
 
 export default function UllamoKitobi({ book }) {
   return (
-    <li className="kitob-li">
-      <img src={book.img} alt="img" />
-      <h3>{book.nomi}</h3>
-      <p>
-        <i className="bx bxs-star"></i> 4,1-3400 fikrlar
-      </p>
-    </li>
+    <Link to={`../kitoblar/${book.bookId}`}>
+      <li className="kitob-li">
+        <img src={book.bookImg} alt="img" />
+        <h3>{book.bookName}</h3>
+        <p>
+          <i className="bx bxs-star"></i> {book.bookRating}-3400 fikrlar
+        </p>
+      </li>
+    </Link>
   );
 }

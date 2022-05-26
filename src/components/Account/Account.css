@@ -1,0 +1,81 @@
+.account {
+  width: 100vw;
+  min-height: 100vh;
+  color: #fff;
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.top-info-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1200px;
+  height: 361px;
+  background-image: linear-gradient(#2F2F2F 0%,#171717 100%) ;
+  offset: 0,;
+}
+
+.left-info {
+  display: flex;
+  margin-left: 100px;
+}
+
+.left-info img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.img-div {
+  text-align: center;
+  position: relative;
+}
+
+.img-div > div {
+  position: absolute;
+  bottom: 60px;
+  right: 0px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  color: #C9AC8C;
+  border: 2px solid #C9AC8C;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #171717;
+}
+
+.img-div > div i {
+  font-size: 22px;
+}
+
+.img-div > h3 {
+  margin-top: 10px;
+  font-weight: 400;
+  color: #C9AC8C;
+}
+
+.inf {
+  margin-left: 30px;
+}
+
+.inf h3{
+  font-size: 32px;
+  font-weight: 400;
+  color: #C9AC8C;
+  margin-bottom: 10px;
+}
+
+.inf p {
+  margin-bottom: 10px;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.inf p span {
+  color: rgb(161, 160, 160);
+}

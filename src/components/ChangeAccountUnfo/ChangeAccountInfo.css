@@ -1,0 +1,75 @@
+.change-account-flex {
+  color: #fff;
+  display: flex;
+  width: 90%;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.left-div {
+  position: relative;
+
+}
+
+.left-div img {
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+}
+
+.left-div > div {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  color: #000;
+  font-weight: 600;
+  font-size: 33px;
+  border-radius: 5px;
+  top: 140px;
+  right: 10px;
+  box-shadow: rgba(167, 164, 164, 0.3) 0px 19px 38px, rgba(206, 206, 206, 0.22) 0px 15px 12px;
+  cursor: pointer;
+}
+
+
+.right-div {
+  margin-left: 100px;
+  width: 100%;
+}
+
+.form-change {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.form-change input {
+  width: 60%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  outline: none;
+  margin-top: 5px;
+}
+
+.change-div {
+  width: 60%;
+}
+
+.btn-change {
+  float: right;
+  padding: 10px 30px;
+  background-color: aliceblue;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .4s ease;
+}
+
+.btn-change:hover {
+  background-color: rgb(220, 220, 220);
+}
+
+

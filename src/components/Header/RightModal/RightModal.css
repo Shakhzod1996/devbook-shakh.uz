@@ -1,0 +1,106 @@
+.right-modal {
+  width: 450px;
+  background-color: #333;
+  height: 100vh;
+  position: fixed;
+  transition: all .5s ease;
+  right: -100%;
+  top: 0;
+  overflow-y: scroll;
+}
+
+.right-modal-show  {
+  right: 0;
+}
+
+.x-btn {
+  margin: 20px;
+  padding: 10px;
+  background-color: #151515;
+  color: #fff;
+  border-radius: 5px;
+  float: right;
+  cursor: pointer;
+  transition: all .4s ease;
+}
+
+.x-btn:hover {
+  color: #C9AC8C;
+  background-color: #242424;
+}
+
+.save-ul {
+  list-style: none;
+}
+
+.save-li {
+  display: flex;
+  padding: 5px;
+  width: 100%;
+  height: 120px;
+  background-color: #151515;
+  margin-bottom: 20px; 
+}
+
+.save-li > img {
+  width: 80px;
+  height: 100%;
+}
+
+.saved-header {
+  margin-top: 80px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  color: #C9AC8C;
+  font-family: 'Rotterburg Stylish FREE';
+}
+
+.bookname {
+  margin-left: 10px;
+}
+
+.bookname > h3 {
+  font-size: 18px !important;
+}
+
+.bookname > h4 {
+  margin-top: 10px;
+}
+
+.book-price h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.pluz-minus {
+  width: 100%;
+}
+
+.pluz-minus button {
+  padding: 3px 10px;
+  cursor: pointer;
+  background-color: #C9AC8C;
+}
+
+.remove {
+  background-color: crimson !important;
+  color: #fff;
+  transition: all .4s ease;
+}
+
+.remove:hover {
+  background-color: red !important;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  border-top: 1px solid rgb(147, 146, 146);
+}
+
+.bottom h1 {
+  float: right;
+}

@@ -11,7 +11,7 @@
 }
 
 .btns-filter {
-  width: 50%;
+  width: 60%;
   margin: auto;
   display: flex;
   align-items: center;
@@ -54,6 +54,28 @@
   width: 100%;
   text-align: center;
   margin-top: 100px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+
+.pagination button {
+  color: #000;
+  margin-left: 8px;
+  margin-right: 8px;
+  padding: 4px 10px;
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+  transition: all .4s ease;
+}
+
+.pagination button:hover {
+  color: #c9ac8c;
 }
 
 .non-div h1 {
@@ -101,4 +123,26 @@
 
 .temur {
   color: #c9ac8c !important;
+}
+
+.pagination {
+  display: flex;
+  list-style: none;
+}
+
+.pagination li {
+  padding: 7px 15px;
+  background-color: #000;
+  margin: 10px;
+  transition: all .4s ease;
+  cursor: pointer;
+}
+
+.pagination li{
+  color: #fff;
+  text-decoration: none;
+}
+
+.pagination li:hover{
+  color: #c9ac8c;
 }

@@ -14,7 +14,7 @@ export default function SingIn(props) {
       </div>
 
       <div className='right-sign'>
-        <SignForm useSwit={props.useSwit} singIn={props.singIn} setSingIn={props.setSingIn} />
+        <SignForm setSwit={props.setSwit} singIn={props.singIn} setSingIn={props.setSingIn} />
       </div>
     </div>
   )

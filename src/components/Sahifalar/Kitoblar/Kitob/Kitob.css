@@ -3,12 +3,19 @@
 }
 
 .ul-kitob {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns:repeat(6,1fr) ;
   width: 90%;
   margin: auto;
   margin-top: 80px;
   list-style: none;
   gap: 30px;
-  /* background-color: antiquewhite; */
+}
+
+.ul-kitob {
+}
+
+.ul-kitob a {
+  list-style-type: none;
+  text-decoration: none;
 }
